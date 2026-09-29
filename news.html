@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>【翠華社區資訊網】社區最新公告 - 2002年最新版</title>
+
+    <!-- 
+      =======================================================
+      [公告歷史備份]
+      管委會於 2002/04/05 強制下架了 404 號房的住戶清查公告。
+      如果有住戶問起，一律回答「該戶已順利搬遷」。
+      =======================================================
+    -->
+
+    <style>
+        body {
+            background-color: #000080; /* 千禧年經典深藍背景 */
+            color: #000000;
+            font-family: "新細明體", "PMingLiU", serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23000066"/></svg>');
+        }
+
+        /* 經典 2000 年代主容器 */
+        .main-table {
+            width: 760px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 4px outset #cccccc;
+        }
+
+        /* 標頭彩虹爆發風格 */
+        .header-banner {
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* 跑馬燈區塊 */
+        .marquee-box {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            border-bottom: 2px inset #ffffff;
+            padding: 3px;
+        }
+
+        /* 經典側邊欄與主內容區 */
+        .sidebar {
+            width: 180px;
+            background-color: #e6e6e6;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px groove #ffffff;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .sidebar a:visited {
+            color: #800080;
+        }
+
+        .content {
+            vertical-align: top;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        /* 復古按鈕風格 */
+        .btn-retro {
+            background: #c0c0c0;
+            border: 2px outset #ffffff;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "新細明體";
+        }
+
+        /* 千禧年閃爍文字效果 */
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        /* 隱藏線索：同色文字 */
+        .secret-text {
+            color: #ffffff;
+            font-size: 11px;
+        }
+
+        .secret-text::selection {
+            background: #000000;
+            color: #00ff00;
+        }
+
+        /* 計數器風格 */
+        .counter-box {
+            background-color: #000;
+            color: #ff0000;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 6px;
+            border: 1px solid #777;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="main-table" cellpadding="0" cellspacing="0">
+    <!-- 頂部 Banner -->
+    <tr>
+        <td colspan="2" class="header-banner">
+            <h1 style="margin:0; font-size:22px;">★~*翠華社區住戶互助資訊網*~★</h1>
+            <span style="font-size:12px; font-weight:normal;">[建議解析度 800x600 搭配 IE 6.0 瀏覽]</span>
+        </td>
+    </tr>
+
+    <!-- 跑馬燈 -->
+    <tr>
+        <td colspan="2" class="marquee-box">
+            <marquee scrollamount="4" behavior="scroll" direction="left">
+                📢【社區最新公告】請勿於夜間開啟頂樓門鎖！404 號房封條如有破損請立刻通報管理室！
+            </marquee>
+        </td>
+    </tr>
+
+    <!-- 主要內容分欄 -->
+    <tr>
+        <!-- 左側導覽列：全部連結到獨立 HTML 檔案 -->
+        <td class="sidebar">
+            <p><b>├ 本站選單 ┤</b></p>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="news.html">社區最新公告</a></li>
+                <li><a href="members.html">委員會名冊</a></li>
+                <li><a href="console.html">門禁控制台</a></li>
+                <li><a href="guestbook.html">住戶留言板</a></li>
+                <li><a href="lost.html">失物招領處</a></li>
+            </ul>
+            <hr>
+            <p><b>├ 社區狀態 ┤</b></p>
+            <p>現在時間：<br><span id="clock" style="color:blue;">00:00:00</span></p>
+            <p>線上人數：<b>4</b> 人</p>
+            <p>訪客人數：<br><span class="counter-box">004044</span></p>
+            <hr>
+            <div style="text-align:center;">
+                <p>【背景音樂】</p>
+                <button class="btn-retro" onclick="alert('MIDI 音樂載入失敗：檔案已損壞 (404.mid)')">▶ 播放 MIDI</button>
+            </div>
+        </td>
+
+        <!-- 右側主要內容：news.html 公告列表 -->
+        <td class="content">
+            <table width="100%" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                <tr bgcolor="#cccccc">
+                    <td width="20%"><b>發布日期</b></td>
+                    <td width="60%"><b>公告標題</b></td>
+                    <td width="20%"><b>發布單位</b></td>
+                </tr>
+                <tr>
+                    <td>2002/07/12</td>
+                    <td>
+                        <b>關於頂樓水塔清洗與水質說明</b> <span class="blink">NEW!</span><br>
+                        <span style="color:#555;">近日有住戶反映水龍頭流出紅褐色液體，經包商檢測為管道鏽蝕，已進行清理。若再發現混濁物請通知管理室。</span>
+                    </td>
+                    <td>管委會</td>
+                </tr>
+                <tr>
+                    <td>2002/05/20</td>
+                    <td>
+                        <b>夜間安寧與梯間管理宣導</b><br>
+                        <span style="color:#555;">請住戶切勿於深夜 12 點至凌晨 4 點間在 A 棟 4 樓梯間逗留。夜間值班保全若聽到敲擊聲請勿獨自前往。</span>
+                    </td>
+                    <td>安委會</td>
+                </tr>
+                <tr bgcolor="#fff0f0">
+                    <td>2002/04/05</td>
+                    <td>
+                        <b>404 號房封條管制公告</b><br>
+                        <span style="color:red;">404 號房目前處於封鎖狀態，由警方與管委會共同保管。任何人嚴禁破壞門口封條或嘗試開鎖。</span>
+                    </td>
+                    <td>主任委員</td>
+                </tr>
+                <tr>
+                    <td>2002/04/04</td>
+                    <td>
+                        <span style="color:gray; text-decoration:line-through;">[已撤回公告] 關於 A 棟 4 樓住戶失蹤事件調查通報</span><br>
+                        <span style="color:#888;">（該公告已被管理員小陳刪除並進行歸檔）</span>
+                    </td>
+                    <td>管理室</td>
+                </tr>
+            </table>
+
+            <br>
+            <p class="secret-text">隱藏線索：祂離去的那一天是 04 月 04 日，後台驗證碼格式為 MMDD (0404)。</p>
+        </td>
+    </tr>
+
+    <!-- 頁尾 Footer -->
+    <tr>
+        <td colspan="2" style="background:#cccccc; text-align:center; padding:5px; font-size:11px; border-top:2px groove #fff;">
+            翡翠社區管理委員會 版權所有 © 2002 Best viewed with Netscape 4.0 or IE 5.0+ <br>
+            <span style="color:#666;">網站維護人：小陳 (Last Updated: 2002/04/05)</span>
+        </td>
+    </tr>
+</table>
+
+<script>
+    // 數位時鐘
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>

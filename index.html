@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>【翠華社區資訊網】歡迎光臨 - 2002年最新版</title>
+
+    <!-- 
+      =======================================================
+      [開發者小陳 2002/04/05 03:14 留言]
+      老張，404號房的事別再提了！管委會把紀錄都刪了。
+      我把備份密碼改成了「祂離開的那一天」（格式：MMDD）。
+      千萬別讓其他人知道這個後台！
+      =======================================================
+    -->
+
+    <style>
+        body {
+            background-color: #000080; /* 千禧年經典深藍背景 */
+            color: #000000;
+            font-family: "新細明體", "PMingLiU", serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23000066"/></svg>');
+        }
+
+        /* 經典 2000 年代主容器 */
+        .main-table {
+            width: 760px; /* 針對 800x600 螢幕優化的黃金寬度 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 4px outset #cccccc;
+            transition: transform 0.05s ease;
+        }
+
+        /* 密碼錯誤時的螢幕震動與紅光效果 */
+        .shake {
+            animation: shake 0.3s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(3px, 3px) rotate(0deg); }
+            20% { transform: translate(-3px, -3px) rotate(-1deg); }
+            40% { transform: translate(-3px, 3px) rotate(1deg); }
+            60% { transform: translate(3px, 1px) rotate(0deg); }
+            80% { transform: translate(1px, -2px) rotate(1deg); }
+            100% { transform: translate(-1px, 2px) rotate(-1deg); }
+        }
+
+        .error-flash {
+            background-color: #800000 !important;
+        }
+
+        /* 標頭彩虹爆發風格 */
+        .header-banner {
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* 跑馬燈區塊 */
+        .marquee-box {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            border-bottom: 2px inset #ffffff;
+            padding: 3px;
+        }
+
+        /* 經典側邊欄與主內容區 */
+        .sidebar {
+            width: 180px;
+            background-color: #e6e6e6;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px groove #ffffff;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .sidebar a:visited {
+            color: #800080;
+        }
+
+        .content {
+            vertical-align: top;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        /* 復古按鈕風格 */
+        .btn-retro {
+            background: #c0c0c0;
+            border: 2px outset #ffffff;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "新細明體";
+        }
+
+        .btn-retro:active {
+            border: 2px inset #ffffff;
+        }
+
+        /* 千禧年閃爍文字效果 */
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        /* 隱藏線索：同色文字 */
+        .secret-text {
+            color: #ffffff;
+            font-size: 11px;
+        }
+
+        .secret-text::selection {
+            background: #000000;
+            color: #00ff00;
+        }
+
+        /* 綠字黑底後台 Console 區塊 */
+        .console-box {
+            background-color: #000000;
+            color: #00ff00;
+            border: 3px inset #808080;
+            padding: 8px;
+            font-family: "Courier New", monospace;
+            margin-top: 15px;
+        }
+
+        .console-input {
+            background-color: #000000;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            width: 80px;
+            text-align: center;
+        }
+
+        /* 計數器風格 */
+        .counter-box {
+            background-color: #000;
+            color: #fffb00;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 6px;
+            border: 1px solid #777;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<table id="main-frame" class="main-table" cellpadding="0" cellspacing="0">
+    <!-- 頂部 Banner -->
+    <tr>
+        <td colspan="2" class="header-banner">
+            <h1 style="margin:0; font-size:22px;">★~*翠華社區住戶互助資訊網*~★</h1>
+            <span style="font-size:12px; font-weight:normal;">[建議解析度 800x600 搭配 IE 6.0 瀏覽]</span>
+        </td>
+    </tr>
+
+    <!-- 跑馬燈 -->
+    <tr>
+        <td colspan="2" class="marquee-box">
+            <marquee scrollamount="4" behavior="scroll" direction="left">
+                🚨【重要公告】中元普渡大拜拜將於農曆七月十五舉行，請各住戶踴躍參加！ ★★★ 404號房持續封鎖中，請勿好奇破壞封條！ ★★★ 本站累計參觀人次突破 100,000 人！
+            </marquee>
+        </td>
+    </tr>
+
+    <!-- 主要內容分欄 -->
+    <tr>
+        <!-- 左側導覽列：全部指向單獨獨立的 HTML 檔案 -->
+        <td class="sidebar">
+            <p><b>├ 本站選單 ┤</b></p>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="news.html">社區最新公告</a></li>
+                <li><a href="members.html">委員會名冊</a></li>
+                <li><a href="console.html">門禁控制台</a></li>
+                <li><a href="guestbook.html">住戶留言板</a></li>
+                <li><a href="lost.html">失物招領處</a></li>
+            </ul>
+            <hr>
+            <p><b>├ 社區狀態 ┤</b></p>
+            <p>現在時間：<br><span id="clock" style="color:blue;">00:00:00</span></p>
+            <p>線上人數：<b>4</b> 人</p>
+            <p>訪客人數：<br><span class="counter-box">004044</span></p>
+            <hr>
+            <div style="text-align:center;">
+                <p>【背景音樂】</p>
+                <button class="btn-retro" onclick="alert('MIDI 音樂載入失敗：檔案已損壞 (404.mid)')">▶ 播放 MIDI</button>
+            </div>
+        </td>
+
+        <!-- 右側主要內容：index.html 專屬首頁內容 -->
+        <td class="content">
+            <table width="100%" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                <tr bgcolor="#cccccc">
+                    <td><b>歡迎光臨翠華社區資訊網</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>本網站由翠華社區管理委員會維護，旨在提供社區居民即時資訊交流與守望相助服務。</p>
+                        <p><b>【今日提醒】</b> 深夜請鎖好門窗，若在四樓梯間聽到奇怪異音，請勿前往查看並立即聯繫管理員。</p>
+                        <p class="secret-text">隱藏提示：祂離去的那一天是 04 月 04 日，密碼格式為 MMDD。</p>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- 後台解密 Console 區塊 -->
+            <div class="console-box">
+                <p style="margin:0;">＞ 翠華社區 404 號房電子門禁維護後台 v1.02</p>
+                <p style="margin:5px 0;">＞ 請輸入 4 位數解鎖密碼 (MMDD)：</p>
+                ＞ <input type="text" id="passcode" class="console-input" maxlength="4">
+                <button class="btn-retro" onclick="checkCode()">確認送出</button>
+                <p id="msg" style="margin:5px 0; color:#ff0000;"></p>
+            </div>
+        </td>
+    </tr>
+
+    <!-- 頁尾 Footer -->
+    <tr>
+        <td colspan="2" style="background:#cccccc; text-align:center; padding:5px; font-size:11px; border-top:2px groove #fff;">
+            翡翠社區管理委員會 版權所有 © 2002 Best viewed with Netscape 4.0 or IE 5.0+ <br>
+            <span style="color:#666;">網站維護人：小陳 (Last Updated: 2002/04/05)</span>
+        </td>
+    </tr>
+</table>
+
+<script>
+    // 數位時鐘
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 密碼驗證邏輯
+    function checkCode() {
+        const input = document.getElementById('passcode').value;
+        const msg = document.getElementById('msg');
+        const mainFrame = document.getElementById('main-frame');
+        const body = document.body;
+
+        if (input === '0404') {
+            msg.style.color = '#00ff00';
+            msg.innerHTML = '【驗證成功】門鎖開啓中...<br>即將跳轉進入內部檔案庫：<a href="page2.html" style="color:#ffff00;">[點此開啟 404 號房內部紀錄]</a>';
+            setTimeout(() => { window.location.href = 'page2.html'; }, 1500);
+        } else {
+            msg.style.color = '#ff0000';
+            msg.innerText = '【錯誤】密碼不正確！警告：系統已記錄您的存取紀錄。';
+
+            // 啟動紅光與震動特效
+            mainFrame.classList.add('shake');
+            body.classList.add('error-flash');
+
+            // 連續警告視窗
+            setTimeout(() => { alert("⚠️ 系統警告：檢測到未授權存取嘗試！"); }, 100);
+            setTimeout(() => { alert("🚨 警告：404 號房電子監視器已啟動..."); }, 300);
+            setTimeout(() => { alert("👁️ 祂... 看到你了。"); }, 500);
+            setTimeout(() => { 
+                alert("請盡速離開翠華社區網站！");
+                mainFrame.classList.remove('shake');
+                body.classList.remove('error-flash');
+            }, 700);
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>【翠華社區資訊網】失物招領與委員會名冊 - 2002年最新版</title>
+
+    <!-- 
+      =======================================================
+      [保全紀錄] 
+      404號房遺留物已歸檔至失物招領處。
+      名冊上「許先生」的名字被主委強制用黑色墨水塗掉了。
+      =======================================================
+    -->
+
+    <style>
+        body {
+            background-color: #000080; /* 千禧年經典深藍背景 */
+            color: #000000;
+            font-family: "新細明體", "PMingLiU", serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23000066"/></svg>');
+        }
+
+        /* 經典 2000 年代主容器 */
+        .main-table {
+            width: 760px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 4px outset #cccccc;
+        }
+
+        /* 標頭彩虹爆發風格 */
+        .header-banner {
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* 跑馬燈區塊 */
+        .marquee-box {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            border-bottom: 2px inset #ffffff;
+            padding: 3px;
+        }
+
+        /* 經典側邊欄與主內容區 */
+        .sidebar {
+            width: 180px;
+            background-color: #e6e6e6;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px groove #ffffff;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .content {
+            vertical-align: top;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        /* 復古按鈕風格 */
+        .btn-retro {
+            background: #c0c0c0;
+            border: 2px outset #ffffff;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "新細明體";
+        }
+
+        .btn-retro:active {
+            border: 2px inset #ffffff;
+        }
+
+        /* 被塗黑/刪除的名冊文字 */
+        .redacted {
+            background-color: #000000;
+            color: #000000;
+            user-select: none;
+            padding: 0 4px;
+        }
+
+        .redacted:hover {
+            color: #ff0000; /* 滑鼠移上去時顯示隱藏文字 */
+        }
+
+        /* 隱藏線索文字 */
+        .secret-hint {
+            color: #ffffff;
+            font-size: 11px;
+        }
+
+        .secret-hint::selection {
+            background: #000000;
+            color: #00ff00;
+        }
+
+        /* 標籤頁（Tab）樣式 */
+        .tab-button {
+            background: #e6e6e6;
+            border: 2px outset #ffffff;
+            padding: 4px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tab-active {
+            background: #ffffff;
+            border-bottom: 2px solid #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<table class="main-table" cellpadding="0" cellspacing="0">
+    <!-- 頂部 Banner -->
+    <tr>
+        <td colspan="2" class="header-banner">
+            <h1 style="margin:0; font-size:22px;">★~*翠華社區住戶互助資訊網*~★</h1>
+            <span style="font-size:12px; font-weight:normal;">[建議解析度 800x600 搭配 IE 6.0 瀏覽]</span>
+        </td>
+    </tr>
+
+    <!-- 跑馬燈 -->
+    <tr>
+        <td colspan="2" class="marquee-box">
+            <marquee scrollamount="4" behavior="scroll" direction="left">
+                🚨【遺失物啟事】請於一個月內前來管理室領取個人物品，逾期將由管委會全權處置！
+            </marquee>
+        </td>
+    </tr>
+
+    <!-- 主要內容分欄 -->
+    <tr>
+        <!-- 左側導覽列 -->
+        <td class="sidebar">
+            <p><b>├ 本站選單 ┤</b></p>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="news.html">社區最新公告</a></li>
+                <li><a href="members.html">委員會名冊</a></li>
+                <li><a href="console.html">門禁控制台</a></li>
+                <li><a href="guestbook.html">住戶留言板</a></li>
+                <li><a href="lost.html">失物招領處</a></li>
+            </ul>
+            <hr>
+            <p><b>├ 頁面狀態 ┤</b></p>
+            <p>目前位置：<br><b style="color:red;">失物招領 / 名冊</b></p>
+            <p>檔案狀態：<b style="color:green;">唯讀 (Read-only)</b></p>
+        </td>
+
+        <!-- 右側主要內容 -->
+        <td class="content">
+            <!-- 頁籤切換按鈕 -->
+            <div style="margin-bottom: 10px;">
+                <span id="tab1-btn" class="tab-button tab-active" onclick="switchTab('lost')">📦 社區失物招領處</span>
+                <span id="tab2-btn" class="tab-button" onclick="switchTab('members')">👥 委員會名冊 (2002)</span>
+            </div>
+
+            <!-- 1. 失物招領區塊 (Default) -->
+            <div id="lost-section">
+                <table width="100%" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                    <tr bgcolor="#cccccc">
+                        <td width="15%"><b>拾獲日期</b></td>
+                        <td width="25%"><b>物品名稱</b></td>
+                        <td width="25%"><b>拾獲地點</b></td>
+                        <td width="35%"><b>狀態 / 備註</b></td>
+                    </tr>
+                    <tr>
+                        <td>2002/07/15</td>
+                        <td>紅色摺疊雨傘</td>
+                        <td>一樓大廳郵箱旁</td>
+                        <td>已領回（B棟3樓李太太）</td>
+                    </tr>
+                    <tr>
+                        <td>2002/06/02</td>
+                        <td>光陽機車鑰匙串</td>
+                        <td>地下室 B1 停車場</td>
+                        <td>保管中（請至管理室認領）</td>
+                    </tr>
+                    <tr bgcolor="#fff0f0">
+                        <td><b>2002/04/04</b></td>
+                        <td><b>鏽蝕黃銅鑰匙與錄音帶</b></td>
+                        <td><b>404 號房門口走廊</b></td>
+                        <td>
+                            <b style="color:red;">禁止領取（警方扣押線索）</b><br>
+                            <button class="btn-retro" onclick="playAudioPrompt()">▶ 試聽錄音帶音訊 (help.WAV)</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 2. 委員會名冊區塊 (預設隱藏) -->
+            <div id="members-section" style="display: none;">
+                <table width="100%" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                    <tr bgcolor="#cccccc">
+                        <td width="20%"><b>職稱</b></td>
+                        <td width="25%"><b>姓名</b></td>
+                        <td width="20%"><b>居住單元</b></td>
+                        <td width="35%"><b>聯絡備註</b></td>
+                    </tr>
+                    <tr>
+                        <td>主任委員</td>
+                        <td>張國雄</td>
+                        <td>A棟 7樓-1</td>
+                        <td>日間均在社區管理室</td>
+                    </tr>
+                    <tr>
+                        <td>財務委員</td>
+                        <td>陳淑芬</td>
+                        <td>B棟 5樓-2</td>
+                        <td>負責每月中元普渡與管理費收取</td>
+                    </tr>
+                    <tr bgcolor="#f0f0f0">
+                        <td>安全委員</td>
+                        <td><span class="redacted" title="劃掉的名單">許雅雯之父</span></td>
+                        <td><span class="redacted">A棟 4樓-4</span></td>
+                        <td><span style="color:gray;">[該資料已被管委會強制塗黑刪除]</span></td>
+                    </tr>
+                    <tr>
+                        <td>系統維護員</td>
+                        <td>陳工程師 (小陳)</td>
+                        <td>地下室管理室</td>
+                        <td>夜間值班，負責後台網站維護</td>
+                    </tr>
+                </table>
+                <p style="font-size:11px; color:#666; margin-top:8px;">
+                    ※ 註：若發現名冊資料有誤，請聯繫社區管理室辦理更正。
+                </p>
+            </div>
+        </td>
+    </tr>
+
+    <!-- 頁尾Footer -->
+    <tr>
+        <td colspan="2" style="background:#cccccc; text-align:center; padding:5px; font-size:11px; border-top:2px groove #fff;">
+            翡翠社區管理委員會 版權所有 © 2002 Best viewed with Netscape 4.0 or IE 5.0+ <br>
+            <a href="index.html" style="color:#000;">[返回社區首頁]</a>
+        </td>
+    </tr>
+</table>
+
+<!-- 音訊播放（播放剛才的 help.WAV） -->
+<audio id="morsedAudio" src="help.WAV"></audio>
+
+<script>
+    // 頁籤切換邏輯
+    function switchTab(tabName) {
+        const lostSec = document.getElementById('lost-section');
+        const membersSec = document.getElementById('members-section');
+        const tab1Btn = document.getElementById('tab1-btn');
+        const tab2Btn = document.getElementById('tab2-btn');
+
+        if (tabName === 'lost') {
+            lostSec.style.display = 'block';
+            membersSec.style.display = 'none';
+            tab1Btn.classList.add('tab-active');
+            tab2Btn.classList.remove('tab-active');
+        } else {
+            lostSec.style.display = 'none';
+            membersSec.style.display = 'block';
+            tab2Btn.classList.add('tab-active');
+            tab1Btn.classList.remove('tab-active');
+        }
+    }
+
+    // 播放錄音帶音效
+    function playAudioPrompt() {
+        const audio = document.getElementById('morsedAudio');
+        audio.play()
+    }
+
+    // 檢查網址參數，如果網址是 members.html 則自動切換到名冊頁面
+    if (window.location.pathname.includes('members.html')) {
+        switchTab('members');
+    }
+</script>
+
+</body>
+</html>

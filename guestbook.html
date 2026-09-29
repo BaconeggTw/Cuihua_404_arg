@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>【翠華社區資訊網】住戶留言板 - 2002年最新版</title>
+
+    <!-- 
+      =======================================================
+      [留言板管理後台備忘]
+      小陳：請把 IP 210.68.xxx.xx 留下的「關於404號房」留言刪掉。
+      主委說不能讓外面的人看到這些討論。
+      =======================================================
+    -->
+
+    <style>
+        body {
+            background-color: #000080; /* 千禧年經典深藍背景 */
+            color: #000000;
+            font-family: "新細明體", "PMingLiU", serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23000066"/></svg>');
+        }
+
+        /* 經典 2000 年代主容器 */
+        .main-table {
+            width: 760px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 4px outset #cccccc;
+        }
+
+        /* 標頭彩虹爆發風格 */
+        .header-banner {
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* 跑馬燈區塊 */
+        .marquee-box {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            border-bottom: 2px inset #ffffff;
+            padding: 3px;
+        }
+
+        /* 經典側邊欄與主內容區 */
+        .sidebar {
+            width: 180px;
+            background-color: #e6e6e6;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px groove #ffffff;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .sidebar a:visited {
+            color: #800080;
+        }
+
+        .content {
+            vertical-align: top;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        /* 復古按鈕風格 */
+        .btn-retro {
+            background: #c0c0c0;
+            border: 2px outset #ffffff;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "新細明體";
+        }
+
+        /* 留言板單一條目樣式 */
+        .guestbook-entry {
+            border: 1px solid #999;
+            background-color: #f9f9f9;
+            margin-bottom: 12px;
+            padding: 6px;
+        }
+
+        .guestbook-header {
+            background-color: #e0e0e0;
+            padding: 3px 6px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        .guestbook-reply {
+            margin-top: 6px;
+            padding: 4px;
+            background-color: #fff0f0;
+            border-left: 3px solid #ff0000;
+            color: #333;
+        }
+
+        /* 隱藏線索：同色文字 */
+        .secret-text {
+            color: #ffffff;
+            font-size: 11px;
+        }
+
+        .secret-text::selection {
+            background: #000000;
+            color: #00ff00;
+        }
+
+        /* 計數器風格 */
+        .counter-box {
+            background-color: #000;
+            color: #ff0000;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 6px;
+            border: 1px solid #777;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="main-table" cellpadding="0" cellspacing="0">
+    <!-- 頂部 Banner -->
+    <tr>
+        <td colspan="2" class="header-banner">
+            <h1 style="margin:0; font-size:22px;">★~*翠華社區住戶互助資訊網*~★</h1>
+            <span style="font-size:12px; font-weight:normal;">[建議解析度 800x600 搭配 IE 6.0 瀏覽]</span>
+        </td>
+    </tr>
+
+    <!-- 跑馬燈 -->
+    <tr>
+        <td colspan="2" class="marquee-box">
+            <marquee scrollamount="4" behavior="scroll" direction="left">
+                💬 歡迎在此留下您對社區的建議與反饋！理性發言，打造和睦社區！
+            </marquee>
+        </td>
+    </tr>
+
+    <!-- 主要內容分欄 -->
+    <tr>
+        <!-- 左側導覽列 -->
+        <td class="sidebar">
+            <p><b>├ 本站選單 ┤</b></p>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="news.html">社區最新公告</a></li>
+                <li><a href="members.html">委員會名冊</a></li>
+                <li><a href="console.html">門禁控制台</a></li>
+                <li><a href="guestbook.html">住戶留言板</a></li>
+                <li><a href="lost.html">失物招領處</a></li>
+            </ul>
+            <hr>
+            <p><b>├ 社區狀態 ┤</b></p>
+            <p>現在時間：<br><span id="clock" style="color:blue;">00:00:00</span></p>
+            <p>線上人數：<b>4</b> 人</p>
+            <p>訪客人數：<br><span class="counter-box">004044</span></p>
+            <hr>
+            <div style="text-align:center;">
+                <p>【背景音樂】</p>
+                <button class="btn-retro" onclick="alert('MIDI 音樂載入失敗：檔案已損壞 (404.mid)')">▶ 播放 MIDI</button>
+            </div>
+        </td>
+
+        <!-- 右側主要內容：guestbook.html 留言列表與發表區 -->
+        <td class="content">
+            <fieldset style="margin-bottom: 15px;">
+                <legend><b>✍️ 我要留言 (Write Guestbook)</b></legend>
+                <form onsubmit="addFakeComment(event)">
+                    暱稱：<input type="text" size="15" required> 
+                    單元：<input type="text" size="10" placeholder="例：A棟3樓"><br>
+                    內容：<br>
+                    <textarea rows="3" cols="50" style="width:98%;" required></textarea><br>
+                    <button type="submit" class="btn-retro">送出留言</button>
+                    <button type="reset" class="btn-retro">重填</button>
+                </form>
+            </fieldset>
+
+            <div id="comments-container">
+                <!-- 留言 1 -->
+                <div class="guestbook-entry">
+                    <div class="guestbook-header">
+                        No.043 | 暱稱：路人A | 時間：2002/08/01 22:14
+                    </div>
+                    <p style="margin:5px 0;">這網站排版好懷舊喔！不過想請問一下，404號房到底怎麼了？看到門口貼滿封條有點可怕。</p>
+                    <div class="guestbook-reply">
+                        <b>[站長小陳 回覆]：</b> 該住戶已搬離社區，請勿前往該樓層圍觀。
+                    </div>
+                </div>
+
+                <!-- 留言 2 -->
+                <div class="guestbook-entry">
+                    <div class="guestbook-header">
+                        No.042 | 暱稱：B棟王太太 | 時間：2002/07/28 01:05
+                    </div>
+                    <p style="margin:5px 0;">深夜一直聽到四樓傳出「扣……扣……扣」的聲音，而且水龍頭流出來的水都有腥味，主委可以處理一下嗎？</p>
+                    <div class="guestbook-reply">
+                        <b>[主委 回覆]：</b> 水塔已請包商維修，異音部分會請保全加強夜間巡邏。
+                    </div>
+                </div>
+
+                <!-- 留言 3（被刪除的隱藏留言） -->
+                <div class="guestbook-entry" style="border-color: #ff0000; background-color: #fff0f0;">
+                    <div class="guestbook-header" style="background-color: #ffcccc;">
+                        No.041 | 暱稱：<span style="color:red;">[已屏蔽住戶]</span> | 時間：2002/04/05 03:00
+                    </div>
+                    <p style="margin:5px 0; color: gray; text-decoration: line-through;">
+                        【該留言因違反社區管理守則已被管委會強制隱藏】<br>
+                        （原始內容：許先生沒有搬走！祂還在裡面！門上的密碼是祂離開的那一天 0404……）
+                    </p>
+                </div>
+            </div>
+
+            <p class="secret-text">隱藏線索：祂離去的那一天是 04 月 04 日，解鎖後台的密碼為 0404。</p>
+        </td>
+    </tr>
+
+    <!-- 頁尾 Footer -->
+    <tr>
+        <td colspan="2" style="background:#cccccc; text-align:center; padding:5px; font-size:11px; border-top:2px groove #fff;">
+            翡翠社區管理委員會 版權所有 © 2002 Best viewed with Netscape 4.0 or IE 5.0+ <br>
+            <span style="color:#666;">網站維護人：小陳 (Last Updated: 2002/04/05)</span>
+        </td>
+    </tr>
+</table>
+
+<script>
+    // 數位時鐘
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 模擬送出留言效果
+    function addFakeComment(e) {
+        e.preventDefault();
+        alert("【系統提示】訊息送出失敗：留言板伺服器已被系統管理員鎖定為「唯讀模式 (Read-Only)」。");
+    }
+</script>
+
+</body>
+</html>
