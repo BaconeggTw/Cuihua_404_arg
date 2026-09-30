@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>【翠華社區資訊網】失物招領處 - 2002年最新版</title>
+
+    <!-- 
+      =======================================================
+      [保全紀錄] 
+      404號房遺留物已歸檔至失物招領處。
+      名冊上「許先生」的名字被主委強制用黑色墨水塗掉了。
+      =======================================================
+    -->
+
+    <style>
+        body {
+            background-color: #000080; /* 千禧年經典深藍背景 */
+            color: #000000;
+            font-family: "新細明體", "PMingLiU", serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23000066"/></svg>');
+        }
+
+        /* 經典 2000 年代主容器 */
+        .main-table {
+            width: 760px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 4px outset #cccccc;
+        }
+
+        /* 標頭彩虹爆發風格 */
+        .header-banner {
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* 跑馬燈區塊 */
+        .marquee-box {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            border-bottom: 2px inset #ffffff;
+            padding: 3px;
+        }
+
+        /* 經典側邊欄與主內容區 */
+        .sidebar {
+            width: 180px;
+            background-color: #e6e6e6;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px groove #ffffff;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .sidebar a:visited {
+            color: #800080;
+        }
+
+        .content {
+            vertical-align: top;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        /* 復古按鈕風格 */
+        .btn-retro {
+            background: #c0c0c0;
+            border: 2px outset #ffffff;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "新細明體";
+        }
+
+        .btn-retro:active {
+            border: 2px inset #ffffff;
+        }
+
+        /* 隱藏線索文字 */
+        .secret-hint {
+            color: #ffffff;
+            font-size: 11px;
+        }
+
+        .secret-hint::selection {
+            background: #000000;
+            color: #00ff00;
+        }
+
+        /* 計數器風格 */
+        .counter-box {
+            background-color: #000;
+            color: #fffb00;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 6px;
+            border: 1px solid #777;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="main-table" cellpadding="0" cellspacing="0">
+    <!-- 頂部 Banner -->
+    <tr>
+        <td colspan="2" class="header-banner">
+            <h1 style="margin:0; font-size:22px;">★~*翠華社區住戶互助資訊網*~★</h1>
+            <span style="font-size:12px; font-weight:normal;">[建議解析度 800x600 搭配 IE 6.0 瀏覽]</span>
+        </td>
+    </tr>
+
+    <!-- 跑馬燈 -->
+    <tr>
+        <td colspan="2" class="marquee-box">
+            <marquee scrollamount="4" behavior="scroll" direction="left">
+                🚨【遺失物啟事】請於一個月內前來管理室領取個人物品，逾期將由管委會全權處置！
+            </marquee>
+        </td>
+    </tr>
+
+    <!-- 主要內容分欄 -->
+    <tr>
+        <!-- 左側導覽列 -->
+        <td class="sidebar">
+            <p><b>├ 本站選單 ┤</b></p>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="news.html">社區最新公告</a></li>
+                <li><a href="members.html">委員會名冊</a></li>
+                <li><a href="console.html">門禁控制台</a></li>
+                <li><a href="guestbook.html">住戶留言板</a></li>
+                <li><a href="lost.html">失物招領處</a></li>
+            </ul>
+            <hr>
+            <p><b>├ 社區狀態 ┤</b></p>
+            <p>現在時間：<br><span id="clock" style="color:blue;">00:00:00</span></p>
+            <p>線上人數：<b>4</b> 人</p>
+            <p>訪客人數：<br><span class="counter-box">004044</span></p>
+            <hr>
+            <div style="text-align:center;">
+                <p>【背景音樂】</p>
+                <button class="btn-retro" onclick="alert('MIDI 音樂載入失敗：檔案已損壞 (404.mid)')">▶ 播放 MIDI</button>
+            </div>
+        </td>
+
+        <!-- 右側主要內容：lost.html 失物招領列表 -->
+        <td class="content">
+            <table width="100%" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                <tr bgcolor="#cccccc">
+                    <td width="15%"><b>拾獲日期</b></td>
+                    <td width="25%"><b>物品名稱</b></td>
+                    <td width="25%"><b>拾獲地點</b></td>
+                    <td width="35%"><b>狀態 / 備註</b></td>
+                </tr>
+                <tr>
+                    <td>2002/07/15</td>
+                    <td>紅色摺疊雨傘</td>
+                    <td>一樓大廳郵箱旁</td>
+                    <td>已領回（B棟3樓李太太）</td>
+                </tr>
+                <tr>
+                    <td>2002/06/02</td>
+                    <td>光陽機車鑰匙串</td>
+                    <td>地下室 B1 停車場</td>
+                    <td>保管中（請至管理室認領）</td>
+                </tr>
+                <tr bgcolor="#fff0f0">
+                    <td><b>2002/04/04</b></td>
+                    <td><b>鏽蝕黃銅鑰匙與錄音帶</b></td>
+                    <td><b>404 號房門口走廊</b></td>
+                    <td>
+                        <b style="color:red;">禁止領取（警方扣押線索）</b><br>
+                        <button class="btn-retro" onclick="playAudioPrompt()">▶ 試聽錄音帶音訊 (help.WAV)</button>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <p class="secret-hint">提示：錄音帶裡的蜂鳴聲似乎是有規律的摩斯密碼，解碼結果為 CUIHUA404...</p>
+        </td>
+    </tr>
+
+    <!-- 頁尾 Footer -->
+    <tr>
+        <td colspan="2" style="background:#cccccc; text-align:center; padding:5px; font-size:11px; border-top:2px groove #fff;">
+            翡翠社區管理委員會 版權所有 © 2002 Best viewed with Netscape 4.0 or IE 5.0+ <br>
+            <span style="color:#666;">網站維護人：小陳 (Last Updated: 2002/04/05)</span>
+        </td>
+    </tr>
+</table>
+
+<!-- 音訊播放器（指向專案根目錄下的 help.WAV） -->
+<audio id="morsedAudio" src="help.WAV"></audio>
+
+<script>
+    // 數位時鐘
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 播放錄音帶摩斯密碼音效
+    function playAudioPrompt() {
+        const audio = document.getElementById('morsedAudio');
+        audio.play().catch(err => {
+            alert("【播放失敗】請確認 help.WAV 檔案已上傳至同一個 GitHub 資料夾中。");
+        });
+        alert("【播放錄音帶】\n錄音帶傳出微弱的電流聲與規律的蜂鳴滴答聲（摩斯密碼）...");
+    }
+</script>
+
+</body>
+</html>
